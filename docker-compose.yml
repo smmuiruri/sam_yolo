@@ -9,17 +9,17 @@ services:
             - ./client:/client
             - /client/node_modules
         links:
-            - api
+            - backend
         networks:
             webappnetwork
-    api:
-        image: webapp-api
+    backend:
+        image: webapp-backend
         restart: always
         ports:
-            - "9000:9000"
+            - "5000:5000"
         volumes:
-            - ./api:/api
-            - /api/node_modules
+            - ./backend:/backend
+            - /backend/node_modules
         depends_on:
             - mongodb
         networks:
