@@ -1,5 +1,5 @@
 {
-  "name": "yolo_app",
+  "name": "sam_yolo_app",
   "version": "1.0.0",
   "description": "Yolomy app built with MERN stack",
   "main": "server.js",
