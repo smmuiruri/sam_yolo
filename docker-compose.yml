@@ -2,9 +2,9 @@ version: "2"
 services:
     client:
         build: ./client
-        restart: always
+        #restart: always
         ports:
-            - "3000:3000"
+            - 3000:3000
         volumes:
             - ./client:/client
             - /client/node_modules
@@ -16,7 +16,7 @@ services:
         build: ./backend
         restart: always
         ports:
-            - "5000:5000"
+            - 5000:5000
         volumes:
             - ./backend:/backend
             - /backend/node_modules
@@ -32,7 +32,7 @@ services:
             - ./data-node:/data/db
         ports:
             - 27017:27017
-        command: mongod --noauth --smallfiles
+        #command: mongod --noauth --smallfiles
         networks:
             - webappnetwork 
 networks:
